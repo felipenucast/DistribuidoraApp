@@ -1,0 +1,32 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- PERMISOS van aquí, dentro del manifest, antes de <application> -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DistribuidoraApp">
+
+        <!-- LoginActivity será la primera en abrir -->
+        <activity
+            android:name="com.example.distribuidoraapp.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity (opcional) -->
+        <activity
+            android:name="com.example.distribuidoraapp.MainActivity"
+            android:exported="false" />
+
+    </application>
+</manifest>
